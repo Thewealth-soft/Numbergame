@@ -1,0 +1,141 @@
+*,
+*::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+
+:root {
+  --white: #fff;
+  --greyLight-1: #e4ebf5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+
+  --bg-color: rgba(87, 155, 175, 0.833)
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 40%;
+  background-color: var(--greyLight-1);
+  margin: 6rem auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.5rem 0.5rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.4rem var(--greyDark);
+}
+
+.container h1 {
+  width: 80%;
+  margin: 2rem auto;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0.3rem 0.3rem 0.5rem var(--greyDark), -0.3rem -0.3rem 0.5rem var(--greyLight-2);
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.point {
+  position: absolute;
+  bottom: 45%;
+  left: 20%;
+  font-size: 2rem;
+}
+
+.container input {
+  margin: 1rem auto;
+  width: 40%;
+  height: 1.9rem;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  box-shadow: inset 0.2rem 0.2rem 0.3rem var(--greyLight-2), inset -0.2rem -0.2rem 0.3rem var(--white);
+  /* opacity: 0; */
+  animation: animatePlate 3s forwards infinite;
+}
+
+@keyframes inputanimate {
+  to {
+    transform: rotateZ('20%');
+  }
+}
+
+.btn {
+  margin: 2rem auto;
+}
+
+button {
+
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0.2rem 0.2rem 0.3rem var(--greyLight-2), inset -0.2rem -0.2rem 0.3rem var(--white);
+  opacity: 0;
+  animation: animateTray 5s ease forwards;
+}
+
+@keyframes animateTray {
+  to {
+    opacity: 1;
+  }
+}
+
+button:hover {
+  color: var(--white);
+  background-color: var(--bg-color);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  /* opacity: 0; */
+  animation: animateTray2 2s ease forwards;
+}
+
+@keyframes animateTray2 {
+  to {
+    /* opacity: 1; */
+  }
+}
+
+marquee {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem var(--greyDark), -0.3rem -0.3rem 0.5rem var(--greyLight-2);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: 80%;
+  }
+
+  .btn {
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 90%;
+  }
+}
