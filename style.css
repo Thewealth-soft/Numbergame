@@ -60,15 +60,8 @@ label {
   border: none;
   outline: none;
   box-shadow: inset 0.2rem 0.2rem 0.3rem var(--greyLight-2), inset -0.2rem -0.2rem 0.3rem var(--white);
-  /* opacity: 0; */
-  animation: animatePlate 3s forwards infinite;
 }
 
-@keyframes inputanimate {
-  to {
-    transform: rotateZ('20%');
-  }
-}
 
 .btn {
   margin: 2rem auto;
@@ -102,22 +95,15 @@ p {
   font-size: 1.2rem;
   line-height: 1.2rem;
   text-align: center;
-  /* opacity: 0; */
-  animation: animateTray2 2s ease forwards;
 }
 
-@keyframes animateTray2 {
-  to {
-    /* opacity: 1; */
-  }
-}
 
 marquee {
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0.3rem 0.3rem 0.5rem var(--greyDark), -0.3rem -0.3rem 0.5rem var(--greyLight-2);
 }
-
+/* The Media Query for small screen */
 @media screen and (max-width: 768px) {
   .container {
     width: 70%;
